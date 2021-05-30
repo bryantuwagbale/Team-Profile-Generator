@@ -18,16 +18,84 @@ inquirer
             message: 'Enter manager name',
         },
         {
-            
-        }
+            name: 'managerId',
+            type: 'input',
+            message: 'Enter manager ID',
+        },
+        {
+            name: 'managerEmail',
+            type: 'input',
+            message: 'Enter manager email',
+        },
+        {
+            name: 'managerOfficeNumber',
+            type: 'input',
+            message: 'Enter manager office number',
+        },
+        {
+            name: 'addMember',
+            type: 'list',
+            message: 'Add a member',
+            choices: ['Engineer', 'Intern']
+        },
+    ]);
+   
+   
+    function addMember()
+    {
+        inquirer
+            .prompt([
+        // list of questions
+        {
+            name: 'intern',
+            type: 'input',
+            message: 'Enter intern name',
+        },
+        {
+            name: 'internId',
+            type: 'input',
+            message: 'Enter intern ID',
+        },
+        {
+            name: 'internEmail',
+            type: 'input',
+            message: 'Enter intern email',
+        },
+        {
+            name: 'internSchool',
+            type: 'input',
+            message: 'Enter intern school',
+        },
+       
+        
     ])
-    .then(answers => {
-        fs.writeFileSync(html, '');
-    })
-    .catch(error => {
-        if(error.isTtyError) {
-        } else {
-
-        }
-    });
-    
+    }
+    function addMember()
+    {
+        inquirer
+            .prompt([
+        // list of questions
+        {
+            name: 'engineer',
+            type: 'input',
+            message: 'Enter engineer name',
+        },
+        {
+            name: 'engineerId',
+            type: 'input',
+            message: 'Enter engineer ID',
+        },
+        {
+            name: 'engineerEmail',
+            type: 'input',
+            message: 'Enter engineer email',
+        },
+        {
+            name: 'engineerGithub',
+            type: 'input',
+            message: 'Enter engineer Github',
+        },
+       
+        
+    ])
+    }
